@@ -3,7 +3,10 @@ html{
 }
 body {
     margin: 0;
-    background-color: #F6F8FF;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(0deg, #f3a812a2 10%, #7D82B8 100%) fixed;
 }
 
 /* navbar */
@@ -11,7 +14,8 @@ body {
 #navbar {
     writing-mode: vertical-lr;
     text-orientation: upright;
-    background-image:linear-gradient(50deg, #F3A712 10%, #7D82B8 100%);
+    /* background-image:linear-gradient(50deg, #F3A712 10%, #7D82B8 100%); */
+    background-color: #7D82B8;
     color: #3C3A8C;
     /* color: white; */
     /* display: flex; */
@@ -26,26 +30,57 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    font-family: "Chakra Petch", sans-serif;
 
 
 }
-
 /* Main */
 
 .main{
     display: flex;
     justify-content: center;
-    color: #6E0D25;
     padding-right: 30px;
     
 }
 
-#mainText{
+.main_text{
     /* display: flex; */
     /* flex-direction: column; */
     text-align: center;
+    font-family: "Alegreya Sans SC", sans-serif;
+    font-size: 20pt;
+    letter-spacing: 3px;
+    color: #f6f8ff;
 
 }
-.name{
-    
+#name{
+    font-family: "Alegreya Sans SC", sans-serif;
+    font-size: 50pt;
 }
+.main h2{
+    font-size: 35pt;
+    margin: 0pt;
+    color: #6E0D25;
+}
+#design_code{
+    font-family: "Chakra Petch", sans-serif;
+    color:#3C3A8C;
+    font-size: smaller;
+    font-style: italic;
+    letter-spacing: 3px;
+   
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #3C3A8C;
+    width: 0;
+    animation: typing 3s steps(30, end) forwards, blinking 2s infinite;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+@keyframes blinking {
+    0% {border-right-color: transparent}
+    50% {border-right-color: #3C3A8C}
+    100% {border-right-color: transparent};
+  }
